@@ -1,5 +1,5 @@
 # docker-sonoshttpapi
-Docker Image for Node-Sonos-HTTP-API
+Docker Image for Node-Sonos-HTTP-API https://github.com/jishi/node-sonos-http-api
 
 ## Docker Hub
 https://hub.docker.com/r/mkshb/sonoshttpapi
