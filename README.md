@@ -3,6 +3,7 @@ Docker Image for Node-Sonos-HTTP-API https://github.com/jishi/node-sonos-http-ap
 
 ## Docker Hub
 https://hub.docker.com/r/mkshb/sonoshttpapi
+Image is available für arm and amd64
 
 ## Install Docker Image
 docker pull mkshb/sonoshttpapi
