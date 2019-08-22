@@ -32,18 +32,3 @@ echo {} > settings/settings.json
   -v `pwd`/cache:/app/cache \
   -v `pwd`/presets:/app/presets \
   mkshb/sonoshttpapi
-
-## docker-compose file
-version: '3.1'
-
-services:
-
-  sonosapi:
-    image: mkshb/sonoshttpapi:amd64-1.6.9
-    restart: always
-    volumes:
-      - ./settings:/app/settings
-      - ./clips:/app/static/clips
-      - ./cache:/app/cache
-      - ./presets:/app/presets
-    network_mode: "host"
