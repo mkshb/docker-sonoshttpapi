@@ -2,15 +2,18 @@
 
 FROM node:11-alpine
 
+RUN mkdir /app
+
 WORKDIR /app
 
-RUN	apk	--no-cache add curl && \
-	curl -L https://github.com/jishi/node-sonos-http-api/archive/master.tar.gz --output master.tar.gz && \
-	tar xvzf master.tar.gz --strip=1 -C /app && \
-	mkdir cache && \
-	ln -s settings/settings.json && \
-	chown -R node:node static cache && \
-	npm install --production
+RUN apk	--no-cache add curl 
+RUN curl -L https://github.com/jishi/node-sonos-http-api/archive/master.tar.gz --output master.tar.gz
+RUN tar xvzf master.tar.gz --strip=1 -C /app
+RUN rm master.tar.gz
+RUN mkdir cache 
+RUN ln -s settings/settings.json
+RUN chown -R node:node static cache
+RUN npm install --production
 
 EXPOSE 5005
 
